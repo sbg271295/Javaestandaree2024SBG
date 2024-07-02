@@ -60,7 +60,6 @@ input {
 			let tematica=document.getElementById("tematica").value;
 			let duracion=document.getElementById("duracion").value;
 			let precio=document.getElementById("precio").value;
-			console.log("Nombre:"+nombre+"fin nombre");
 			if(nombre.trim().length==0){
 				alert("El curso no puede estar vacío!");
 				return false;
@@ -69,11 +68,11 @@ input {
 				alert("Temática no válida");
 				return false;
 			}
-			if(isNaN(duracion)||(duracion<30||duracion>200)){
+			if(duracion.trim().length==0||isNaN(duracion)||(duracion<30||duracion>200)){
 				alert("Duración no válida");
 				return false;
 			}
-			if(isNaN(precio)||precio<0){
+			if(precio.trim().length==0||isNaN(precio)||precio<0){
 				alert("precio no válido");
 				return false;
 			}
