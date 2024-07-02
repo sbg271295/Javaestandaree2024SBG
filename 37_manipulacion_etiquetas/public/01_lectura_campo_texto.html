@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Saludo Personalizado</title>
+</head>
+<body>
+Introduce nombre: <input type="text" id="nombre"><br><br>
+<input type="button" value="Saludar" onclick="saludar();">
+<div id="respuesta"></div>
+<script type="text/javascript">
+function saludar(){
+    // Obtenemos el objeto etiqueta;
+    var obj = document.getElementById("nombre");
+    // Mediante la propiedad value, obtenemos 
+    // el valor escrito en su interior
+    // alert("Bienvenido/a "+ obj.value);
+    var resp = document.getElementById("respuesta");
+    resp.innerHTML = "<b> Bienvenido/a " + obj.value + "</b>";
+}
+</script>
+</body>
+</html>
