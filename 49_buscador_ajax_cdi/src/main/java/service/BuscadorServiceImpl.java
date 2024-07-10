@@ -19,9 +19,8 @@ public class BuscadorServiceImpl implements BuscadorService {
 			dao.save(resultado);
 			return true;
 		}
-		return false;		
+		return false;
 	}
-	
 	@Override
 	public Optional<Resultado> buscarResultadoPorId(int idResultado) {
 		Resultado resultado=dao.findById(idResultado);
