@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Operaciones Matemáticas</title>
+</head>
+<body>
+Introduce numero 1: <input type="text" id="numero_1"><br><br>
+Introduce numero 2: <input type="text" id="numero_2"><br><br>
+
+<input type="button" value="Sumar" onclick="sumar();">
+<input type="button" value="Multiplicar" onclick="multiplicar();">
+<input type="button" value="Dividir" onclick="dividir();">
+
+<h1 id="resp"></h1>
+
+<script type="text/javascript">
+function sumar(){
+    var num_1 = parseInt(document.getElementById("numero_1").value);
+    var num_2 = parseInt(document.getElementById("numero_2").value);
+    document.getElementById("resp").innerHTML = "<b>" + (num_1 + num_2) + "</b>";
+    resetear();
+}
+
+function multiplicar(){
+    var num_1 = parseInt(document.getElementById("numero_1").value);
+    var num_2 = parseInt(document.getElementById("numero_2").value);
+    document.getElementById("resp").innerHTML = "<b>" + (num_1 * num_2) + "</b>";
+    resetear();
+}
+
+function dividir(){
+    var num_1 = parseInt(document.getElementById("numero_1").value);
+    var num_2 = parseInt(document.getElementById("numero_2").value);
+    if (num_2 === 0) {
+        document.getElementById("resp").innerHTML = "<b>No se puede dividir por cero</b>";
+    } else {
+        document.getElementById("resp").innerHTML = "<b>" + (num_1 / num_2) + "</b>";
+    }
+    resetear();
+}
+
+function resetear(){
+	document.getElementById("n1").values="";
+	document.getElementById("n2").values="";
+	document.getElementById("n1").focus();
+}
+</script>
+</body>
+</html>
